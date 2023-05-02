@@ -1,0 +1,258 @@
+/*---------- Responsive typography ----------*/
+@media screen and (min-width: 1152px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --bigger-font-size: 2rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+/*------------- BREAKPOINTS -------------*/
+/*--- For small devices ---*/
+@media screen and (max-width: 320px) {
+    .wrapper {
+        margin-inline: 1rem;
+    }
+
+    .skillsContent {
+        grid-template-columns: max-content;
+        row-gap: 1rem;
+    }
+
+    .servicesCard {
+        padding-block: 1.5rem;
+    }
+}
+
+
+/*--- For medium devices ---*/
+@media screen and (min-width: 576px) {
+
+    .homeContainer,
+    .aboutContainer,
+    .skillsContainer,
+    .servicesContainer,
+    .projectsContainer,
+    .contactContainer {
+        grid-template-columns: 360px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navMenu {
+        width: 55%;
+    }
+
+    .homeContainer,
+    .aboutContainer,
+    .skillsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .homeData,
+    .aboutData,
+    .skillsData,
+    :is(.aboutData, .skillsData) :is(.sectionSubtitle, .sectionTitle) {
+        text-align: initial;
+    }
+
+    .homeSocial {
+        justify-content: initial;
+    }
+
+    .homeBlob,
+    .aboutBlob {
+        width: 400px;
+    }
+
+    .aboutData {
+        order: 1;
+    }
+
+    .servicesContainer,
+    .projectsContainer {
+        grid-template-columns: repeat(2, 352px);
+    }
+}
+
+
+/*--- For large devices ---*/
+@media screen and (min-width: 1024px) {
+    .section {
+        padding-block: 7rem 2rem;
+    }
+
+    .sectionSubtitle {
+        font-size: var(--normal-font-size);
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .navClose,
+    .navToggle {
+        display: none;
+    }
+
+    .navList {
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+
+    .navMenu {
+        width: initial;
+    }
+
+    .blurHeader::after {
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .wrapper {
+        margin-inline: auto;
+    }
+
+    .homeContainer {
+        grid-template-columns: 455px 550px;
+        column-gap: 7rem;
+        padding-block: 2rem 3rem;
+    }
+
+    .homeBlob {
+        width: 550px;
+    }
+
+    .homeContent {
+        row-gap: 4.5rem;
+    }
+
+    .home-description {
+        margin-block: 1.5rem 2.5rem;
+    }
+
+    .homeSocial {
+        column-gap: 1.5rem
+    }
+
+
+    .aboutContainer {
+        grid-template-columns: 550px 460px;
+        column-gap: 4.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .aboutBlob {
+        width: 550px;
+    }
+
+    .aboutDescription {
+        margin-bottom: 3rem;
+    }
+
+
+    .skillsContainer {
+        grid-template-columns: 340px 425px;
+        column-gap: 10rem;
+        padding-bottom: 4rem;
+    }
+
+    .skillsDescription {
+        margin-bottom: 3rem;
+    }
+
+    .skillsContent {
+        column-gap: 8rem;
+    }
+
+    .skillsGroup {
+        row-gap: 1.5rem;
+    }
+
+    .skillsItem {
+        font-size: var(--h3-font-size);
+    }
+
+
+    .servicesContainer {
+        grid-template-columns: repeat(3, 352px);
+        padding-block: 2.5rem 4rem;
+    }
+
+    .servicesCard {
+        padding: 3.5rem 2rem;
+    }
+
+
+    .projectsContainer {
+        grid-template-columns: repeat(3, 350px);
+        row-gap: 3rem;
+        padding-block: 2.5rem 4rem;
+    }
+
+    .projectsButton {
+        font-size: var(--normal-font-size);
+    }
+
+
+    .contactContainer {
+        grid-template-columns: 680px;
+        padding-block: 2.5rem 2rem;
+    }
+
+    .contactForm {
+        row-gap: 1.5rem;
+    }
+
+    .contactGroup {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+
+    .contactInput {
+        padding: 1.5rem;
+    }
+
+    .contactForm textarea {
+        height: 20rem;
+    }
+
+
+    .footer {
+        padding-block: 4.5rem 4rem;
+    }
+
+    .footerContainer {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        text-align: initial;
+    }
+
+    .footerTitle {
+        font-size: var(--bigger-font-size);
+    }
+
+    .footerSocial {
+        column-gap: 1.5rem;
+    }
+
+    .footerCopy {
+        margin: 0;
+        justify-self: flex-end;
+    }
+
+
+    .scrollUp {
+        right: 3rem;
+    }
+}
