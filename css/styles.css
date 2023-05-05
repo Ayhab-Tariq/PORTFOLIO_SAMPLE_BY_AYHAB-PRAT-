@@ -1,3 +1,38 @@
+/*------------- CSS FOR PRELOADER -------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background: hsla(228, 15%, 15%, .9) url("/img/logo.png") no-repeat center;
+  background-size: 10%;
+
+  /*animation*/
+  animation-name: preloading-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes preloading-animation {
+  0% {
+    background-size: 10%;
+  }
+
+  25% {
+    background-size: 5%;
+  }
+
+  50% {
+    background-size: 10%;
+  }
+
+  100% {
+    background-size: 5%;
+  }
+}
+
 /*------------- GOOGLE FONTS -------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -5,30 +40,15 @@
 :root {
   --header-height: 3.5rem;
 
-  /*---------- Colors ----------*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /* 
-      Change favorite color
-      Default: hsl(162, 100%, 40%)
-      Orange: hsl(14, 100%, 65%) - Blue: hsl(210, 100%, 70%)
-      Pink: hsl(356, 100%, 75%) - Purple: hsl(250, 100%, 75%)
-
-      For more colors visit: https://colors.dopely.top/color-pedia
-      -> Choose any color 
-      -> click on tab (Color Conversion)
-      -> Copy the color mode (HSL)
-  */
-
   --hue: 162;
   --first-color: hsl(var(--hue), 100%, 40%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
-  --body-color: hsl(228, 15%, 20%);
   --container-color: hsl(228, 15%, 15%);
+  --container2-color: hsl(228, 15%, 20%);
 
   /*---------- Font and typography ----------*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 2rem;
   --bigger-font-size: 1.25rem;
@@ -45,7 +65,7 @@
   --font-semi-bold: 600;
 
   /*---------- z index ----------*/
-  --z-tooltip: 10;
+  --z-tooltip: 99;
   --z-fixed: 100;
 }
 
@@ -72,7 +92,6 @@ body {
 }
 
 body {
-  background-color: var(--body-color);
   color: var(--text-color);
 }
 
@@ -121,6 +140,7 @@ svg {
 
 .section {
   padding-block: 5rem 2rem;
+  background-color: var(--container2-color);
 }
 
 .sectionTitle,
@@ -253,6 +273,25 @@ svg {
   color: var(--first-color);
 }
 
+/* ResumeButton */
+.resumeBtn {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color .4s;
+  border-radius: .5rem;
+  padding: .6rem 1.5rem;
+  color: #ffffff;
+  background-color: var(--first-color);
+  transition: background box-shadow .4s;
+}
+
+.resumeBtn:hover {
+  color: #000000;
+  background: linear-gradient(to right, var(--title-color), var(--first-color));
+  box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, .25);
+
+}
+
 /*------------- HEADER & NAV CSS END -------------*/
 
 
@@ -347,6 +386,11 @@ svg {
 
 
 /*------------- ABOUT CSS START -------------*/
+
+.aboutAndCertificateSection {
+  background-color: var(--container2-color);
+}
+
 .aboutContainer {
   row-gap: 2.5rem;
 }
@@ -372,6 +416,63 @@ svg {
 }
 
 /*------------- ABOUT CSS END -------------*/
+
+
+/*------------- CERTIFICATION CSS START -------------*/
+.certificateSection {
+  padding-bottom: 5rem;
+  background-color: var(--container2-color);
+}
+
+.certificationTitle {
+  text-align: center;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h1-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.certificateContainer {
+  row-gap: 2rem;
+  padding-block: 1rem;
+}
+
+.certificateCard {
+  text-align: center;
+  background-color: var(--container-color);
+  padding: 3rem 1.25rem;
+  border: 2px solid var(--container-color);
+  transition: border .4s;
+}
+
+.certificateCardOne {
+  border-radius: 0rem 2rem;
+}
+
+.certificateCardTwo {
+  border-radius: 2rem;
+}
+
+.certificateCardThree {
+  border-radius: 2rem 0rem;
+}
+
+.certificateIcon {
+  display: block;
+  font-size: 4.5rem;
+  color: var(--first-color);
+  margin-bottom: .75rem;
+}
+
+.certificateCard:hover {
+  border: 2px solid var(--first-color);
+}
+
+.certificationTitle span {
+  color: var(--first-color);
+}
+
+/*------------- CERTIFICATION CSS END -------------*/
 
 
 /*------------- SKILLS CSS START -------------*/
@@ -456,8 +557,24 @@ svg {
 
 
 /*------------- PROJECTS CSS START -------------*/
-.projects {
+
+/* PARTICLE JS START */
+
+#particles-js {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
   background-color: var(--container-color);
+}
+
+/* PARTICLE JS END */
+
+.projects {
+  padding-block: 5rem 2rem;
 }
 
 .projectsContainer {
@@ -529,6 +646,11 @@ svg {
 
 
 /*------------- CONTACT CSS START -------------*/
+
+.contactAndCvSection {
+  background-color: var(--container2-color);
+}
+
 .contactContainer {
   padding-top: 1rem;
 }
@@ -554,6 +676,10 @@ svg {
   color: var(--text-color);
 }
 
+.contactInput:focus {
+  border: 1px solid var(--first-color);
+}
+
 .contactForm textarea {
   height: 11rem;
   resize: none;
@@ -574,6 +700,42 @@ svg {
 }
 
 /*------------- CONTACT CSS END -------------*/
+
+
+/*------------- CV CSS START -------------*/
+.cvSection {
+  display: flex;
+  justify-content: center;
+  background-color: var(--container2-color);
+}
+
+
+.cvContainer {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid hsla(var(--hue), 100%, 40%, .25);
+
+  width: 50%;
+
+  margin-bottom: 7rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+
+.cvFile {
+  width: 50%;
+}
+
+.cvFile img {
+  border-radius: 0.3rem;
+}
+
+/*------------- CV CSS START -------------*/
+
 
 
 /*------------- FOOTER CSS START -------------*/
@@ -674,5 +836,3 @@ svg {
 }
 
 /*------------- SCROLL UP CSS END -------------*/
-
-

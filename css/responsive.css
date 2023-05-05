@@ -30,12 +30,13 @@
     }
 }
 
-
 /*--- For medium devices ---*/
 @media screen and (min-width: 576px) {
 
     .homeContainer,
     .aboutContainer,
+    .cvContainer,
+    .certificateContainer,
     .skillsContainer,
     .servicesContainer,
     .projectsContainer,
@@ -43,6 +44,7 @@
         grid-template-columns: 360px;
         justify-content: center;
     }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -52,7 +54,7 @@
 
     .homeContainer,
     .aboutContainer,
-    .skillsContainer {
+    .cvContainer .skillsContainer {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
     }
@@ -78,6 +80,7 @@
     }
 
     .servicesContainer,
+    .certificateContainer,
     .projectsContainer {
         grid-template-columns: repeat(2, 352px);
     }
@@ -161,6 +164,12 @@
     }
 
 
+    .certificateContainer {
+        grid-template-columns: repeat(3, 352px);
+        padding-block: 2.5rem 4rem;
+    }
+
+
     .skillsContainer {
         grid-template-columns: 340px 425px;
         column-gap: 10rem;
@@ -227,6 +236,11 @@
         height: 20rem;
     }
 
+    .cvContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 
     .footer {
         padding-block: 4.5rem 4rem;

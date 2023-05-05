@@ -6,23 +6,33 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!------------- FAVICON ------------->
-   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+   <link rel="apple-touch-icon" sizes="180x180" href="./favIcon/">
+   <link rel="icon" type="image/png" sizes="32x32" href="./favIcon//favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./favIcon//favicon-16x16.png">
+   <link rel="icon" type="image/png" sizes="57x57" href="./favIcon//apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="./favIcon//android-chrome-192x192.png">
+   <link rel="manifest" href="./favIcon//site.webmanifest">
 
    <!------------- REMIX ICONS ------------->
    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
    <!------------- CSS ------------->
    <link rel="stylesheet" href="./css/styles.css">
-   
+
    <link rel="stylesheet" href="./css/responsive.css">
 
-   
-   
+   <!-- lightbox popup plugin -->
+   <link rel="stylesheet" href="./css/lightbox.css">
 
    <title>Ayhab Tariq</title>
 </head>
 
 <body>
+
+   <div id="preloader">
+
+   </div>
+
    <!------------- HEADER ------------->
    <header class="header" id="header">
       <nav class="nav wrapper">
@@ -61,6 +71,13 @@
                      Contact
                   </a>
                </li>
+
+               <li>
+                  <a href="#cv" class="resumeBtn">
+                     Resume
+                  </a>
+               </li>
+
             </ul>
 
             <!-- CLOSE BUTTON -->
@@ -112,8 +129,7 @@
                      <i class="ri-github-fill"></i>
                   </a>
 
-                  <a href="https://www.linkedin.com/in/ayhab-tariq-884148181/" target="_blank"
-                     class="homeSocialLink">
+                  <a href="https://www.linkedin.com/in/ayhab-tariq-884148181/" target="_blank" class="homeSocialLink">
                      <i class="ri-linkedin-box-line"></i>
                   </a>
 
@@ -161,69 +177,131 @@
          </div>
       </section>
 
-      <!------------- ABOUT ------------->
-      <section class="about section" id="about">
-         <div class="aboutContainer wrapper gridContainer">
-            <div class="aboutData">
-               <h3 class="sectionSubtitle">
-                  My <span>Intro</span>
-               </h3>
+      <!------------- ABOUT & CERTIFICATION SECTION START ------------->
+      <section class="aboutAndCertificateSection">
+         <!------------- ABOUT ------------->
+         <section class="about section" id="about">
+            <div class="aboutContainer wrapper gridContainer">
+               <div class="aboutData">
+                  <h3 class="sectionSubtitle">
+                     My <span>Intro</span>
+                  </h3>
 
-               <h2 class="sectionTitle">
-                  About Me
-               </h2>
+                  <h2 class="sectionTitle">
+                     About Me
+                  </h2>
 
-               <p class="aboutDescription">
-                  Developer, I create web pages and web applications with
-                  UI / UX user interface and functionalities, I have years of
-                  experience and many clients are happy with the
-                  projects carried out.
-               </p>
+                  <p>
+                     As you know my name is Ayhab Tariq you can also call me PRAT,
+                     I have completed my Bachelors in Computer Sciences.
+                  </p>
 
-               <a href="#contact" class="button">
-                  Contact Me
-               </a>
-            </div>
+                  <p class="aboutDescription">
+                     I am Developer, I create web pages and web applications with
+                     UI / UX user interface and functionalities, I have years of
+                     experience and many clients are happy with the
+                     projects carried out.
+                  </p>
 
-            <div class="aboutImage">
-               <svg class="aboutBlob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <mask id="maskBorder" mask-type="alpha">
-                     <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
+                  <a href="#contact" class="button">
+                     Contact Me
+                  </a>
+               </div>
+
+               <div class="aboutImage">
+                  <svg class="aboutBlob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <mask id="maskBorder" mask-type="alpha">
+                        <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
                      171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
                      448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
                      270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
                      439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black" />
-                  </mask>
-                  <g mask="url(#maskBorder)">
-                     <rect x="37" width="476" height="630" fill="url(#pattern2)" />
+                     </mask>
+                     <g mask="url(#maskBorder)">
+                        <rect x="37" width="476" height="630" fill="url(#pattern2)" />
 
-                     <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
+                        <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
                      192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
                      580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
                      40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
                      175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black"
-                        stroke-width="10" />
-                  </g>
+                           stroke-width="10" />
+                     </g>
 
-                  <rect x="37" width="476" height="300" fill="url(#pattern3)" />
+                     <rect x="37" width="476" height="300" fill="url(#pattern3)" />
 
-                  <defs>
-                     <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)" />
-                     </pattern>
+                     <defs>
+                        <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                           <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)" />
+                        </pattern>
 
-                     <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)" />
-                     </pattern>
+                        <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                           <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)" />
+                        </pattern>
 
-                     <!-- Insert your profile (recommended size: 640 x 940) -->
-                     <image id="imageBorder" width="640" height="940" href="./img/prat.png" />
-                  </defs>
-               </svg>
+                        <!-- Insert your profile (recommended size: 640 x 940) -->
+                        <image id="imageBorder" width="640" height="940" href="./img/prat.png" />
+                     </defs>
+                  </svg>
+               </div>
+
+            </div>
+         </section>
+
+         <!------------- CERTIFICATION ------------->
+         <section class="certificateSection">
+            <h2 class="certificationTitle">
+               My <span>Certificates
+            </h2>
+
+            <div class="certificateContainer wrapper gridContainer">
+               <article class="certificateCard certificateCardOne">
+                  <i class="ri-pages-line certificateIcon"></i>
+
+                  <h2>
+                     Web Development
+                  </h2>
+
+                  <p>
+                     My name is Ayhab Tariq, and
+                     I completed a certification in web development in <b>2018</b>.
+                     The certification program was called Advanced web development,
+                     and it was provided by HOP.
+                  </p>
+               </article>
+
+               <article class="certificateCard certificateCardTwo">
+                  <i class="ri-pen-nib-line certificateIcon"></i>
+
+                  <h2>
+                     Graphic Designing
+                  </h2>
+
+                  <p>
+                     Completed certification in graphic designing in <b>2018</b>. It has equipped me with
+                     the necessary skills and knowledge to make designs and beautifull UI'S at the client request.
+                  </p>
+               </article>
+
+               <article class="certificateCard certificateCardThree">
+                  <i class="ri-reactjs-line certificateIcon"></i>
+
+                  <h2>
+                     Mern Stack
+                  </h2>
+
+                  <p>
+                     I completed a 6-month MERN stack course from NexSkill in 2023, gaining proficiency in full-stack
+                     web
+                     development using cutting-edge technologies. This has opened up new career opportunities for me.
+                  </p>
+               </article>
             </div>
 
-         </div>
+         </section>
       </section>
+      <!------------- ABOUT & CERTIFICATION SECTION END ------------->
+
 
       <!------------- SKILLS ------------->
       <section class="skills section">
@@ -258,11 +336,11 @@
                   </li>
 
                   <li class="skillsItem">
-                     Bootstrap
+                     CSS Frameworks
                   </li>
 
                   <li class="skillsItem">
-                     React
+                     MERN
                   </li>
                </ol>
 
@@ -285,20 +363,20 @@
 
       <!------------- SERVICES ------------->
       <section class="services section" id="services">
-         <h3 class="sectionSubtitle">
-            My <span>Services
-         </h3>
+            <h3 class="sectionSubtitle">
+               My <span>Services
+            </h3>
 
-         <h2 class="sectionTitle">
-            What I Do
-         </h2>
+            <h2 class="sectionTitle">
+               What I Do
+            </h2>
 
          <div class="servicesContainer wrapper gridContainer">
             <article class="servicesCard">
                <i class="ri-layout-3-line servicesIcon"></i>
 
-               <h2 class="services__titlte">
-                  Web Developer
+               <h2>
+                  Frontend-Development
                </h2>
 
                <p>
@@ -309,48 +387,92 @@
             </article>
 
             <article class="servicesCard">
-               <i class="ri-pantone-line servicesIcon"></i>
+               <i class="ri-server-line servicesIcon"></i>
 
-               <h2 class="services__titlte">
-                  UI/UX Designer
+               <h2>
+                  Backend-Development
                </h2>
 
                <p>
-                  I offer design of web interfaces and
-                  mobile applications, design made in
-                  figma, adobe xd and sketch.
+                  Implementing Node.js and Express.js, to develop the server-side of web applications, including
+                  managing authentication,
+                  authorization, and data storage.
                </p>
             </article>
 
             <article class="servicesCard">
-               <i class="ri-pen-nib-line servicesIcon"></i>
+               <i class="ri-database-line servicesIcon"></i>
 
-               <h2 class="services__titlte">
-                  Graphic Design
+               <h2>
+                  Integrating databases
                </h2>
 
                <p>
-                  I make designs at the client's request,
-                  banner design, posters, digital
-                  designs among others.
+                  MongoDB is the database of choice for many MERN stack developers, and use it to integrate
+                  databases with their web applications.
+               </p>
+            </article>
+
+            <article class="servicesCard">
+               <i class="ri-smartphone-line servicesIcon"></i>
+
+               <h2>
+                  Mobile optimization
+               </h2>
+
+               <p>
+                  Creating responsive websites and web applications that are optimized for mobile devices, ensuring a
+                  seamless user experience across all devices.
+               </p>
+            </article>
+
+            <article class="servicesCard">
+               <i class="ri-pantone-line servicesIcon"></i>
+
+               <h2>
+                  Performance optimization
+               </h2>
+
+               <p>
+                  Optimize the performance of MERN stack applications to ensure they are fast and efficient, providing
+                  users with a seamless experience.
+               </p>
+            </article>
+
+            <article class="servicesCard">
+               <i class="ri-settings-6-line servicesIcon"></i>
+
+               <h2>
+                  Website maintenance
+               </h2>
+
+               <p>
+                  Providing ongoing support for existing websites and web applications, including updates, bug fixes,
+                  and security enhancements.
                </p>
             </article>
          </div>
       </section>
 
       <!------------- PROJECTS ------------->
-      <section class="projects section" id="projects">
-         <h3 class="sectionSubtitle">
-            My <span>Jobs</span>
-         </h3>
 
-         <h2 class="sectionTitle">
-            Recent Projects
-         </h2>
+      <section class="projects" id="projects">
+
+         <div id="particles-js">
+
+         </div>
+
+            <h3 class="sectionSubtitle">
+               My <span>Jobs</span>
+            </h3>
+
+            <h2 class="sectionTitle">
+               Recent Projects
+            </h2>
 
          <div class="projectsContainer wrapper gridContainer">
             <article class="projectsCard">
-               <img src="./img/project-img-1.jpg" alt="its my project" class="projectsImg">
+               <img src="./img/netflix_pic.png" alt="its my project" class="projectsImg">
 
                <div class="projectsModal">
                   <span class="projectsSubtitle">
@@ -358,7 +480,25 @@
                   </span>
 
                   <h2 class="projectsTitle">
-                     Modern website
+                     Netflix Clone Ui
+                  </h2>
+
+                  <a href="https://netflixbyayhabtariq.netlify.app/" target="_blank" class="projectsButton">
+                     View demo <i class="ri-external-link-line"></i>
+                  </a>
+               </div>
+            </article>
+
+            <article class="projectsCard">
+               <img src="./img/portfolio_pic.png" alt="its my project" class="projectsImg">
+
+               <div class="projectsModal">
+                  <span class="projectsSubtitle">
+                     Web
+                  </span>
+
+                  <h2 class="projectsTitle">
+                     Portfolio
                   </h2>
 
                   <a href="#" class="projectsButton">
@@ -368,7 +508,7 @@
             </article>
 
             <article class="projectsCard">
-               <img src="./img/project-img-2.jpg" alt="its my project" class="projectsImg">
+               <img src="./img/organicfood_pic.png" alt="its my project" class="projectsImg">
 
                <div class="projectsModal">
                   <span class="projectsSubtitle">
@@ -376,46 +516,28 @@
                   </span>
 
                   <h2 class="projectsTitle">
-                     Modern website
+                     Organic Food
                   </h2>
 
-                  <a href="#" class="projectsButton">
+                  <a href="https://organicfoodbyayhab.netlify.app/" target="_blank" class="projectsButton">
                      View demo <i class="ri-external-link-line"></i>
                   </a>
                </div>
             </article>
 
             <article class="projectsCard">
-               <img src="./img/project-img-3.jpg" alt="its my project" class="projectsImg">
+               <img src="./img/weatherapp_pic.png" alt="its my project" class="projectsImg">
 
                <div class="projectsModal">
                   <span class="projectsSubtitle">
-                     Web
+                     Web API
                   </span>
 
                   <h2 class="projectsTitle">
                      Modern website
                   </h2>
 
-                  <a href="#" class="projectsButton">
-                     View demo <i class="ri-external-link-line"></i>
-                  </a>
-               </div>
-            </article>
-
-            <article class="projectsCard">
-               <img src="./img/project-img-4.jpg" alt="its my project" class="projectsImg">
-
-               <div class="projectsModal">
-                  <span class="projectsSubtitle">
-                     Web
-                  </span>
-
-                  <h2 class="projectsTitle">
-                     Modern website
-                  </h2>
-
-                  <a href="#" class="projectsButton">
+                  <a href="https://github.com/Ayhab-Tariq/WeatherApp-API" target="_blank" class="projectsButton">
                      View demo <i class="ri-external-link-line"></i>
                   </a>
                </div>
@@ -459,37 +581,67 @@
          </div>
       </section>
 
-      <!------------- CONTACT ------------->
-      <section class="contactC section" id="contact">
-         <h3 class="sectionSubtitle">
-            Get In <span>Touch</span>
-         </h3>
 
-         <h2 class="sectionTitle">
-            Contact Me
-         </h2>
+      <!------------- CONTACT & CV SECTION START ------------->
+      <section class="contactAndCvSection">
+         <!------------- CONTACT ------------->
+         <section class="section" id="contact">
+               <h3 class="sectionSubtitle">
+                  Get In <span>Touch</span>
+               </h3>
 
-         <div class="contactContainer wrapper gridContainer">
-            <form action="" class="contactForm" id="contact-form">
-               <div class="contactGroup">
-                  <input type="text" name="user_name" required placeholder="Enter your name" class="contactInput" autocomplete="off">
+               <h2 class="sectionTitle">
+                  Contact Me
+               </h2>
 
-                  <input type="email" name="user_email" required placeholder="Enter your email" class="contactInput">
+            <div class="contactContainer wrapper gridContainer">
+               <form action="" class="contactForm" id="contact-form">
+                  <div class="contactGroup">
+                     <input type="text" name="user_name" required placeholder="Enter your name" class="contactInput"
+                        autocomplete="off">
+
+                     <input type="email" name="user_email" required placeholder="Enter your email" class="contactInput"
+                        autocomplete="off">
+                  </div>
+
+                  <textarea name="user_message" required placeholder="Enter your message"
+                     class="contactInput"></textarea>
+
+                  <p class="contactMessage" id="contact-message">
+
+                  </p>
+
+                  <button type="submit" class="button contactButton">
+                     Send Message
+                  </button>
+               </form>
+            </div>
+         </section>
+
+         <!-- CV -->
+         <section class="cvSection" id="cv">
+            <div class="cvContainer">
+
+               <div class="cvFile">
+
+                  <a href="./img/AYHAB RESUME.jpg" data-lightbox="image-1" data-title="Resume">
+                     <img src="./img/AYHAB RESUME.jpg" alt="">
+                  </a>
+
                </div>
 
-               <textarea name="user_message" required placeholder="Enter your message"
-                  class="contactInput"></textarea>
+               <div>
+                  <a href="./AYHAB RESUME.pdf" class="button" download="./AYHAB RESUME.pdf">
+                     Download
+                  </a>
+               </div>
 
-               <p class="contactMessage" id="contact-message">
-
-               </p>
-
-               <button type="submit" class="button contactButton">
-                  Send Message
-               </button>
-            </form>
-         </div>
+            </div>
+         </section>
       </section>
+      <!------------- CONTACT & CV SECTION END ------------->
+
+
    </main>
 
    <!------------- FOOTER ------------->
@@ -530,7 +682,7 @@
       <i class="ri-arrow-up-line"></i>
    </a>
 
-   
+
    <!------------- SCROLL REVEAL ------------->
    <script src="./js/scrollreveal.min.js"></script>
 
@@ -539,6 +691,14 @@
 
    <!------------- MAIN JS ------------->
    <script src="./js/main.js"></script>
+
+   <!------------- LIGHTBOX.JS POP-UP PLUGIN ------------->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="./js/lightbox.min.js"></script>
+
+   <!------------- JS PARTICLE ------------->
+   <script src="./js/particleJS/particles.js"></script>
+   <script src="./js/particleJS/app.js"></script>
 
 </body>
 

@@ -107,7 +107,7 @@ const scrollActive = () => {
     })
 }
 window.addEventListener('scroll', scrollActive)
-/*------------- SCROLL SECTIONS ACTIVE END -------------*/
+/*------------- SCROLL SECTIONS ACTIVE LINK END -------------*/
 
 
 /*------------- SCROLL REVEAL ANIMATION START -------------*/
@@ -120,10 +120,18 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.homeData, .homeSocial, .contactContainer, .footerContainer`)
-sr.reveal(`.homeImage`, { origin: 'bottom' })
+sr.reveal(`.homeImage, .cvSection, .certificationTitle`, { origin: 'bottom' })
 
-sr.reveal(`.aboutData, .skillsData`, { origin: 'left' })
-sr.reveal(`.aboutImage, .skillsContent`, { origin: 'right' })
+sr.reveal(`.aboutData, .skillsData, .certificateCardOne`, { origin: 'left' })
+sr.reveal(`.aboutImage, .skillsContent, .certificateCardThree`, { origin: 'right' })
 
-sr.reveal(`.servicesCard, .projectsCard`, { interval: 100 })
-/*------------- SCROLL REVEAL ANIMATION END-------------*/
+sr.reveal(`.servicesCard, .projectsCard, .certificateCardTwo`, { interval: 100 })
+/*------------- SCROLL REVEAL ANIMATION END -------------*/
+
+
+/*------------- PRELOADER START -------------*/
+window.addEventListener('load', function () {
+    var preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+});
+/*------------- PRELOADER END -------------*/
